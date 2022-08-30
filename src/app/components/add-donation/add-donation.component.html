@@ -1,12 +1,12 @@
 <div class="p-fluid grid">
     <form [formGroup]="donationFormGroup">
-        <div class="field col-12 md:col-4">
+        <div class="field col-12 md:col-2">
             <span class="p-float-label">
                 <input formControlName="foreignPoliticalEntityName" type="text" id="inputtext" pInputText>
                 <label for="inputtext">*שם היישות המדינית הזרה</label>
             </span>
         </div>
-        <div class="field col-12 md:col-4">
+        <div class="field col-12 md:col-2">
             <span class="p-float-label">
                 <input type="text" id="inputtext" formControlName="donationAmount" pInputText>
                 <label for="inputtext">*סכום התרומה בש"ח</label>
@@ -19,26 +19,26 @@
                 <label for="dropdown">*סוג הישות המדינית הזרה</label>
             </span>
         </div>
-        <div class="field col-12 md:col-4">
+        <div class="field col-12 md:col-12">
             <span class="p-float-label">
                 <input type="text" formControlName="DonationDesignation" id="inputtext" pInputText>
                 <label for="inputtext">*ייעוד התרומה</label>
             </span>
         </div>
-        <div class="field col-12 md:col-4">
+        <div class="field col-12 md:col-12">
             <span class="p-float-label">
                 <input type="text" formControlName="donationConditions" id="inputtext" pInputText>
                 <label for="inputtext">התנאים לתרומה</label>
             </span>
         </div>
-        <div class="field col-12 md:col-4">
+        <div class="field col-12 md:col-2">
             <span class="p-float-label">
                 <p-dropdown inputId="dropdown" formControlName="currencyType" [autoDisplayFirst]="false"
                     [options]="currencyTypes" optionLabel="name"></p-dropdown>
                 <label for="dropdown">*סוג המטבע</label>
             </span>
         </div>
-        <div class="field col-12 md:col-4">
+        <div class="field col-12 md:col-2">
             <span class="p-float-label">
                 <input type="text" id="inputtext" formControlName="conversionRate" pInputText>
                 <label for="inputtext">*שער ההמרה</label>
