@@ -1,0 +1,16 @@
+<p-accordion>
+   
+<p-accordionTab *ngFor="let donation of donationList$|async">
+    <ng-template pTemplate="header">
+        <i class="pi pi-pencil" (click)="enableEdit()"></i>
+        <label>{{donation.foreignPoliticalEntityName}}</label>
+        <label>{{donation.donationAmount}}</label>
+    </ng-template>
+    <ng-template pTemplate="content"><app-donation (onSave)="onSave($event)" [enableEdit]="editFlag" [donation]="donation"></app-donation></ng-template>
+</p-accordionTab>
+
+</p-accordion>
+<button pButton pRipple type="button" label="הוספת תרומה" (click)="openAddDonation()" class="p-button-rounded"></button>
+<div *ngIf="displayAddDonation">
+<app-add-donation></app-add-donation>
+</div>
